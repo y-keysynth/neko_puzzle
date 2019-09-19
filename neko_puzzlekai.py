@@ -103,6 +103,11 @@ def draw_txt(txt, x, y, siz, col, tg):
   cvs.create_text(x + 2, y + 2, text = txt, fill = "black", font = fnt, tag = tg)
   cvs.create_text(x, y, text = txt, fill = col, font = fnt, tag = tg)
 
+def draw_auther(txt, x, y, siz, col, tg):
+  fnt = ("Times New Roman", 22, "bold")
+  cvs.create_text(x + 2, y + 2, text = txt, fill = "black", font = fnt, tag = tg)
+  cvs.create_text(x, y, text = txt, fill = col, font = fnt, tag = tg)
+
 def game_main():
   global index, timer, score, tsugi, hisc, difficulty
   global cursor_x, cursor_y, mouse_c
@@ -116,6 +121,7 @@ def game_main():
     draw_txt("Hard", 312, 636, 40, "white", "TITLE")
     cvs.create_rectangle(168, 672, 456, 746, fill= "red", width = 0, tag = "TITLE")
     draw_txt("Extream", 312, 708, 40, "white", "TITLE")
+    draw_auther("廣瀬豪\n「Pythonで作る\nゲーム開発入門講座」", 752, 138, 40, "white", "TITLE")
     index = 1
     mouse_c = 0
   elif index == 1:

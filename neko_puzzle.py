@@ -108,22 +108,26 @@ def game_main():
   global cursor_x, cursor_y, mouse_c
   if index == 0:
     draw_txt("ねこねこ", 312, 240, 100, "violet", "TITLE")
-    cvs.create_rectangle(168, 384, 456, 456, fill= "skyblue", width = 0, tag = "TITLE")
-    draw_txt("Easy", 312, 420, 40, "white", "TITLE")
+    cvs.create_rectangle(168, 456, 456, 528, fill= "skyblue", width = 0, tag = "TITLE")
+    draw_txt("Easy", 312,492, 40, "white", "TITLE")
     cvs.create_rectangle(168, 528, 456, 600, fill= "lightgreen", width = 0, tag = "TITLE")
     draw_txt("Normal", 312, 564, 40, "white", "TITLE")
-    cvs.create_rectangle(168, 672, 456, 744, fill= "orange", width = 0, tag = "TITLE")
-    draw_txt("Hard", 312, 708, 40, "white", "TITLE")
+    cvs.create_rectangle(168, 600, 456, 672, fill= "orange", width = 0, tag = "TITLE")
+    draw_txt("Hard", 312, 636, 40, "white", "TITLE")
+    cvs.create_rectangle(168, 672, 456, 746, fill= "red", width = 0, tag = "TITLE")
+    draw_txt("Extream", 312, 708, 40, "white", "TITLE")
     index = 1
     mouse_c = 0
   elif index == 1:
     difficulty = 0
     if mouse_c == 1:
-      if 168 < mouse_x and mouse_x <456 and 384 < mouse_y and mouse_y < 456:
-        difficulty = 4
+      if 168 < mouse_x and mouse_x <456 and 456 < mouse_y and mouse_y < 528:
+        difficulty = 3
       if 168 < mouse_x and mouse_x <456 and 528 < mouse_y and mouse_y < 600:
+        difficulty = 4
+      if 168 < mouse_x and mouse_x <456 and 600 < mouse_y and mouse_y < 672:
         difficulty = 5
-      if 168 < mouse_x and mouse_x <456 and 672 < mouse_y and mouse_y < 744:
+      if 168 < mouse_x and mouse_x <456 and 672 < mouse_y and mouse_y < 746:
         difficulty = 6
       else:
         mouse_c = 0

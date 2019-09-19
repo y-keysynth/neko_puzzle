@@ -195,7 +195,7 @@ def game_main():
   root.after(100, game_main)
 
 root = tkinter.Tk()
-root.title("３つ")
+root.title("落ち物パズル「ねこねこ」Kai")
 root.resizable(False, False)
 root.bind("<Motion>", mouse_move)
 root.bind("<ButtonPress>", mouse_press)

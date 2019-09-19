@@ -145,6 +145,7 @@ def game_main():
       cvs.delete("TITLE")
       index = 2
   elif index == 2:
+    mouse_c = 0
     if drop_neko() == False:
       index = 3
     draw_neko()

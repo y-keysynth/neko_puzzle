@@ -2,8 +2,8 @@
 Pythonの勉強のために「Pythonでつくるゲーム開発入門講座」を購入。<br>
 githubの勉強もかねてgithubで管理
 
-# modification history
-・クリックの挙動を調整
+# Modification history
+・クリックの挙動を調整<br>
 版外でクリックした情報が残り、版内に移動した際にクリックが発動するので、版外でのクリックを無効にする。<br>
 <br>
 ・ゲームバランス調整<br>

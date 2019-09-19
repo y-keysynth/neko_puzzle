@@ -108,6 +108,16 @@ def draw_auther(txt, x, y, siz, col, tg):
   cvs.create_text(x + 2, y + 2, text = txt, fill = "black", font = fnt, tag = tg)
   cvs.create_text(x, y, text = txt, fill = col, font = fnt, tag = tg)
 
+
+def give_up():
+  global index, tsugi, mouse_c
+  draw_txt("Give Up", 752, 225, 30, "white", "GIVEUP")
+  if 702 < mouse_x and mouse_x <802 and 215 < mouse_y and mouse_y < 235:
+    if mouse_c == 1:
+        mouse_c = 0
+        tsugi = 0
+        index = 6
+
 def game_main():
   global index, timer, score, tsugi, hisc, difficulty
   global cursor_x, cursor_y, mouse_c
@@ -173,6 +183,7 @@ def game_main():
         timer = 0
     draw_neko()
   elif index == 5:
+    give_up()
     if 24 <= mouse_x and mouse_x < 24 + 72 * 8 and 24 <= mouse_y and mouse_y < 24 + 72 * 10:
       cursor_x = int((mouse_x - 24) / 72)
       cursor_y = int((mouse_y - 24) / 72)
@@ -188,6 +199,7 @@ def game_main():
     cvs.create_image(cursor_x * 72 + 60, cursor_y * 72 + 60, image = cursor, tag = "CURSOR")
     draw_neko()
   elif index == 6:
+    cvs.delete("GIVEUP")
     timer += 1
     if timer == 1:
       draw_txt("GAME OVER", 312, 348, 60, "red", "OVER")

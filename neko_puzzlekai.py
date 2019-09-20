@@ -110,12 +110,13 @@ def draw_auther(txt, x, y, siz, col, tg):
 
 
 def give_up():
-  global index, tsugi, mouse_c
+  global index, tsugi, mouse_c, timer
   draw_txt("Give Up", 752, 225, 30, "white", "GIVEUP")
   if 702 < mouse_x and mouse_x <802 and 215 < mouse_y and mouse_y < 235:
     if mouse_c == 1:
         mouse_c = 0
         tsugi = 0
+        timer = 0
         index = 6
 
 def game_main():
